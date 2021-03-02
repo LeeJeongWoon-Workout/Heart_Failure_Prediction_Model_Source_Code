@@ -1,0 +1,17 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns #그래프를 그려주는 라이브러리
+import os
+
+os.environ ['']= ''
+os.environ['']=''
+
+!kaggle datasets download -d andrewmvd/heart-failure-clinical-data
+!unzip '*.zip'  #datasets 파일을 Kaggle Api로 다운 받은 후 zip파일을 압축해제하는 code
+
+#다운받은 CSV 파일을 pandas를 통해 읽을 수 있습니다.
+df = pd.read_csv('heart_failure_clinical_records_dataset.csv')  
+
+#head() : 코렙에서 csv 파일을 읽을 수 있습니다.
+#info(): 각 column 자료의 평균,중간값,분산을 표시해 줍니다.
