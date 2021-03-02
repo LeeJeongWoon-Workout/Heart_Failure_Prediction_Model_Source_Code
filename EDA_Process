@@ -1,0 +1,18 @@
+#What is EDA? #출처:https://eda-ai-lab.tistory.com/13
+
+sns.histplot(data=df,x="age",hue="DEATH_EVENT",kde=True)
+sns.histplot(data=df,x="anaemia",hue="DEATH_EVENT",kde=True)
+sns.histplot(data=df,x="creatinie_phosphokinase",hue="DEATH_EVENT",kde=True)
+sns.histplot(data=df,x="ejection_fraction",hue="DEATH_EVENT",kde=True)
+sns.histplot(data=df,x="serum_creatinine",hue="DEATH_EVENT",kde=True)
+sns.histplot(data=df,x="serum_sodium",hue="DEATH_EVENT",kde=True)
+
+sns.jointplot(x='platelets', y='creatinine_phosphokinase', hue='DEATH_EVENT', data=df, alpha=0.3)
+sns.jointplot(x='ejection_fraction', y='serum_creatinine', data=df, hue='DEATH_EVENT')
+
+sns.boxplot(x='DEATH_EVENT', y='ejection_fraction', data=df)
+sns.boxplot(x='smoking', y='ejection_fraction', data=df)
+
+
+sns.violinplot(x='DEATH_EVENT', y='ejection_fraction', data=df)
+
